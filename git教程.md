@@ -40,7 +40,7 @@ ssh-keygen -t rsa -C "1037572899@qq.com"
 
 ```bash
 git init
-git clone git@github.com:Emilytutu/peerpsycoun_En.git
+git clone git@github.com:Emilytutu/peerpsycoun_En.git // 因为刚刚配置了ssh，所以克隆的时候也一定要选择ssh模式
 ```
 
 克隆到本地后，将自己的代码文件复制到该目录下。执行添加命令，配置提交记录，将代码push到自己仓库的目标分支。
@@ -52,6 +52,16 @@ git push origin main
 ```
 
 ![image-20230607175402439](./git%E6%95%99%E7%A8%8B.assets/image-20230607175402439.png)
+
+既然讲了push，顺便讲一下怎样删除，因为删除也是需要push的
+
+```bash
+git rm --cached 文件名
+git commit -m "remove file from remote"
+git push -u origin main
+```
+
+即可删除远程仓库的指定文件。
 
 ## 怎样比较与回退版本
 
@@ -84,4 +94,27 @@ git pull origin main // 直接从仓库获取最新版本
 注意，由于没有push，所以这些操作都是在本地，GitHub的仓库是没有变化的。
 
 ## 怎样PR(pull request)
+
+如果你想给别人的代码提意见，或者就是团队合作，直接push显然会很混乱，所以这里就有了pull request.想pr首先需要fork这个仓库：
+
+<img src="git教程.assets/image-20230607214349643.png" alt="image-20230607214349643" style="zoom:30%;" />
+
+当然，如果这个仓库之后又更新了，你可以在这里Sync fork一键更新。
+
+<img src="git教程.assets/image-20230607214519341.png" alt="image-20230607214519341" style="zoom:35%;" />
+
+之后对代码进行添加或者修改，再执行如下命令到自己fork的这个仓库。
+
+```bash
+git init
+git add .
+git commit -m "git教程完善"
+git push origin main
+```
+
+之后，点击pull request，会发现这里已经有了自己fork仓库和原仓库的区别。
+
+如果你哪天不想跟他玩了，就删掉这个fork的仓库。https://github.com用户名/仓库名/settings，划到最下面的Delete this repo.
+
+
 
