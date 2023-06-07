@@ -114,7 +114,9 @@ git push origin main
 
 之后，点击pull request，会发现这里已经有了自己fork仓库和原仓库的区别。
 
+![img](./git%E6%95%99%E7%A8%8B.assets/624DM1CWT%5BB17$8@HTT%5B%7BNX.png)
+
 如果你哪天不想跟他玩了，就删掉这个fork的仓库。https://github.com用户名/仓库名/settings，划到最下面的Delete this repo.
 
-
+对于仓库的主人来说，可以选择merge或者其他更多的操作，这之间GitHub会将提pr的人跟仓库主任之间进行邮件往来。
 
